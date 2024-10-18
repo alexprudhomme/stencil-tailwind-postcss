@@ -1,4 +1,6 @@
 import { Config } from '@stencil/core';
+import { postcss } from '@stencil-community/postcss';
+import tailwind from 'tailwindcss';
 
 export const config: Config = {
   namespace: 'stencil-first-try',
@@ -21,6 +23,11 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: "new",
+    browserHeadless: 'new',
   },
+  plugins: [
+    postcss({
+      plugins: [tailwind()],
+    }),
+  ],
 };

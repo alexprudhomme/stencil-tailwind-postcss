@@ -3,8 +3,8 @@ import { format } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
-  styleUrl: 'my-component.css',
-  shadow: true,
+  styleUrl: 'my-component.pcss',
+  shadow: false,
 })
 export class MyComponent {
   /**
@@ -27,6 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <h1 class="bg-red-800">Hello, World! I'm {this.getText()}</h1>;
   }
 }
